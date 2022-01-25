@@ -3,16 +3,6 @@
 
 # CG-SSD
 1. Result on ONCE testing set
-
-    <style type="text/css">
-    .tg  {border-collapse:collapse;border-spacing:0;}
-    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-    overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-    font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
-    .tg .tg-9wq8{text-align:center;vertical-align:middle}
-    </style>
     <table class="tg">
     <thead>
     <tr>
@@ -65,16 +55,7 @@
     </tbody>
     </table>
 2. Result on ONCE Validation Set
-    <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
-.tg .tg-9wq8{text-align:center;vertical-align:middle}
-</style>
-<table class="tg">
+    <table class="tg">
 <thead>
   <tr>
     <th class="tg-9wq8" rowspan="2">Model</th>
@@ -200,16 +181,7 @@
 
 # as a plug-in
 1. result on ONCE validation set
-    <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-9wq8{text-align:left;vertical-align:middle}
-.tg .tg-9wq8{text-align:center;vertical-align:middle}
-</style>
-<table class="tg">
+    <table class="tg">
 <thead>
   <tr>
     <th class="tg-9wq8" rowspan="2">Model</th>
@@ -267,16 +239,8 @@
   </tr>
 </tbody>
 </table>
-2. result on Waymo validation set
-   <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-nrix{text-align:center;vertical-align:middle}
-</style>
-<table class="tg">
+1. result on Waymo validation set
+    <table class="tg">
 <thead>
   <tr>
     <th class="tg-nrix" rowspan="2">Model</th>
