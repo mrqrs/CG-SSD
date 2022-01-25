@@ -60,128 +60,129 @@ State Key Laboratory of Information Engineering in Surveying, Mapping and Remote
     </table>
 2. Result on ONCE Validation Set
     <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-9wq8" rowspan="2">Model</th>
-    <th class="tg-9wq8" colspan="4">Vehicle(AP@50)</th>
-    <th class="tg-9wq8" colspan="4">Pedestrian(AP@50)</th>
-    <th class="tg-9wq8" colspan="4">Cyclist(AP@50)</th>
-    <th class="tg-9wq8" rowspan="2">mAP</th>
-  </tr>
-  <tr>
-    <th class="tg-9wq8">overall</th>
-    <th class="tg-9wq8">0-30m</th>
-    <th class="tg-9wq8">30-50m</th>
-    <th class="tg-9wq8">50m-inf</th>
-    <th class="tg-9wq8">overall</th>
-    <th class="tg-9wq8">0-30m</th>
-    <th class="tg-9wq8">30-50m</th>
-    <th class="tg-9wq8">50m-inf</th>
-    <th class="tg-9wq8">overall</th>
-    <th class="tg-9wq8">0-30m</th>
-    <th class="tg-9wq8">30-50m</th>
-    <th class="tg-9wq8">50m-inf</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-9wq8">PointRCNN</td>
-    <td class="tg-9wq8">   52.09   </td>
-    <td class="tg-9wq8">   74.45   </td>
-    <td class="tg-9wq8">   40.89   </td>
-    <td class="tg-9wq8">   16.81   </td>
-    <td class="tg-9wq8">   4.28   </td>
-    <td class="tg-9wq8">   6.17   </td>
-    <td class="tg-9wq8">   2.40   </td>
-    <td class="tg-9wq8">   0.91   </td>
-    <td class="tg-9wq8">   29.84   </td>
-    <td class="tg-9wq8">   46.03   </td>
-    <td class="tg-9wq8">   20.94   </td>
-    <td class="tg-9wq8">   5.46   </td>
-    <td class="tg-9wq8">   28.74   </td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">PointPillars</td>
-    <td class="tg-9wq8">   68.57   </td>
-    <td class="tg-9wq8">   80.86   </td>
-    <td class="tg-9wq8">   62.07   </td>
-    <td class="tg-9wq8">   47.04   </td>
-    <td class="tg-9wq8">   17.63   </td>
-    <td class="tg-9wq8">   19.74   </td>
-    <td class="tg-9wq8">   15.15   </td>
-    <td class="tg-9wq8">   10.23   </td>
-    <td class="tg-9wq8">   46.81   </td>
-    <td class="tg-9wq8">   58.33   </td>
-    <td class="tg-9wq8">   40.32   </td>
-    <td class="tg-9wq8">   25.86   </td>
-    <td class="tg-9wq8">   44.34   </td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">SECOND</td>
-    <td class="tg-9wq8">   71.19   </td>
-    <td class="tg-9wq8">   84.04   </td>
-    <td class="tg-9wq8">   63.02   </td>
-    <td class="tg-9wq8">   47.25   </td>
-    <td class="tg-9wq8">   26.44   </td>
-    <td class="tg-9wq8">   29.33   </td>
-    <td class="tg-9wq8">   24.05   </td>
-    <td class="tg-9wq8">   18.05   </td>
-    <td class="tg-9wq8">   58.04   </td>
-    <td class="tg-9wq8">   69.96   </td>
-    <td class="tg-9wq8">   52.43   </td>
-    <td class="tg-9wq8">   34.61   </td>
-    <td class="tg-9wq8">   51.89   </td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">PV-RCNN</td>
-    <td class="tg-9wq8">   77.77  </td>
-    <td class="tg-9wq8">   89.39   </td>
-    <td class="tg-9wq8">   72.55   </td>
-    <td class="tg-9wq8">   58.64   </td>
-    <td class="tg-9wq8">   23.50   </td>
-    <td class="tg-9wq8">   25.61   </td>
-    <td class="tg-9wq8">   22.84   </td>
-    <td class="tg-9wq8">   17.27   </td>
-    <td class="tg-9wq8">   59.37   </td>
-    <td class="tg-9wq8">   71.66   </td>
-    <td class="tg-9wq8">   52.58   </td>
-    <td class="tg-9wq8">   36.17   </td>
-    <td class="tg-9wq8">   53.55   </td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">CenterPoint</td>
-    <td class="tg-9wq8">   66.79   </td>
-    <td class="tg-9wq8">   80.10   </td>
-    <td class="tg-9wq8">   59.55   </td>
-    <td class="tg-9wq8">   43.39   </td>
-    <td class="tg-9wq8">   49.90   </td>
-    <td class="tg-9wq8">   56.24   </td>
-    <td class="tg-9wq8">   42.61   </td>
-    <td class="tg-9wq8">   26.27   </td>
-    <td class="tg-9wq8">   63.45   </td>
-    <td class="tg-9wq8">   74.28   </td>
-    <td class="tg-9wq8">   57.94   </td>
-    <td class="tg-9wq8">   41.48   </td>
-    <td class="tg-9wq8">   60.05   </td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">CG-SSD</td>
-    <td class="tg-9wq8">   67.60   </td>
-    <td class="tg-9wq8">   80.22   </td>
-    <td class="tg-9wq8">   61.23   </td>
-    <td class="tg-9wq8">   44.77   </td>
-    <td class="tg-9wq8">   51.50   </td>
-    <td class="tg-9wq8">   58.72   </td>
-    <td class="tg-9wq8">   43.36   </td>
-    <td class="tg-9wq8">   27.76   </td>
-    <td class="tg-9wq8">   65.79   </td>
-    <td class="tg-9wq8">   76.27   </td>
-    <td class="tg-9wq8">   60.84   </td>
-    <td class="tg-9wq8">   43.35   </td>
-    <td class="tg-9wq8">   61.63   </td>
-  </tr>
-</tbody>
-</table>
+    <thead>
+    <tr>
+        <th class="tg-9wq8" rowspan="2">Model</th>
+        <th class="tg-9wq8" colspan="4">Vehicle(AP@50)</th>
+        <th class="tg-9wq8" colspan="4">Pedestrian(AP@50)</th>
+        <th class="tg-9wq8" colspan="4">Cyclist(AP@50)</th>
+        <th class="tg-9wq8" rowspan="2">mAP</th>
+    </tr>
+    <tr>
+        <th class="tg-9wq8">overall</th>
+        <th class="tg-9wq8">0-30m</th>
+        <th class="tg-9wq8">30-50m</th>
+        <th class="tg-9wq8">50m-inf</th>
+        <th class="tg-9wq8">overall</th>
+        <th class="tg-9wq8">0-30m</th>
+        <th class="tg-9wq8">30-50m</th>
+        <th class="tg-9wq8">50m-inf</th>
+        <th class="tg-9wq8">overall</th>
+        <th class="tg-9wq8">0-30m</th>
+        <th class="tg-9wq8">30-50m</th>
+        <th class="tg-9wq8">50m-inf</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-9wq8">PointRCNN</td>
+        <td class="tg-9wq8">   52.09   </td>
+        <td class="tg-9wq8">   74.45   </td>
+        <td class="tg-9wq8">   40.89   </td>
+        <td class="tg-9wq8">   16.81   </td>
+        <td class="tg-9wq8">   4.28   </td>
+        <td class="tg-9wq8">   6.17   </td>
+        <td class="tg-9wq8">   2.40   </td>
+        <td class="tg-9wq8">   0.91   </td>
+        <td class="tg-9wq8">   29.84   </td>
+        <td class="tg-9wq8">   46.03   </td>
+        <td class="tg-9wq8">   20.94   </td>
+        <td class="tg-9wq8">   5.46   </td>
+        <td class="tg-9wq8">   28.74   </td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">PointPillars</td>
+        <td class="tg-9wq8">   68.57   </td>
+        <td class="tg-9wq8">   80.86   </td>
+        <td class="tg-9wq8">   62.07   </td>
+        <td class="tg-9wq8">   47.04   </td>
+        <td class="tg-9wq8">   17.63   </td>
+        <td class="tg-9wq8">   19.74   </td>
+        <td class="tg-9wq8">   15.15   </td>
+        <td class="tg-9wq8">   10.23   </td>
+        <td class="tg-9wq8">   46.81   </td>
+        <td class="tg-9wq8">   58.33   </td>
+        <td class="tg-9wq8">   40.32   </td>
+        <td class="tg-9wq8">   25.86   </td>
+        <td class="tg-9wq8">   44.34   </td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">SECOND</td>
+        <td class="tg-9wq8">   71.19   </td>
+        <td class="tg-9wq8">   84.04   </td>
+        <td class="tg-9wq8">   63.02   </td>
+        <td class="tg-9wq8">   47.25   </td>
+        <td class="tg-9wq8">   26.44   </td>
+        <td class="tg-9wq8">   29.33   </td>
+        <td class="tg-9wq8">   24.05   </td>
+        <td class="tg-9wq8">   18.05   </td>
+        <td class="tg-9wq8">   58.04   </td>
+        <td class="tg-9wq8">   69.96   </td>
+        <td class="tg-9wq8">   52.43   </td>
+        <td class="tg-9wq8">   34.61   </td>
+        <td class="tg-9wq8">   51.89   </td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">PV-RCNN</td>
+        <td class="tg-9wq8">   77.77  </td>
+        <td class="tg-9wq8">   89.39   </td>
+        <td class="tg-9wq8">   72.55   </td>
+        <td class="tg-9wq8">   58.64   </td>
+        <td class="tg-9wq8">   23.50   </td>
+        <td class="tg-9wq8">   25.61   </td>
+        <td class="tg-9wq8">   22.84   </td>
+        <td class="tg-9wq8">   17.27   </td>
+        <td class="tg-9wq8">   59.37   </td>
+        <td class="tg-9wq8">   71.66   </td>
+        <td class="tg-9wq8">   52.58   </td>
+        <td class="tg-9wq8">   36.17   </td>
+        <td class="tg-9wq8">   53.55   </td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">CenterPoint</td>
+        <td class="tg-9wq8">   66.79   </td>
+        <td class="tg-9wq8">   80.10   </td>
+        <td class="tg-9wq8">   59.55   </td>
+        <td class="tg-9wq8">   43.39   </td>
+        <td class="tg-9wq8">   49.90   </td>
+        <td class="tg-9wq8">   56.24   </td>
+        <td class="tg-9wq8">   42.61   </td>
+        <td class="tg-9wq8">   26.27   </td>
+        <td class="tg-9wq8">   63.45   </td>
+        <td class="tg-9wq8">   74.28   </td>
+        <td class="tg-9wq8">   57.94   </td>
+        <td class="tg-9wq8">   41.48   </td>
+        <td class="tg-9wq8">   60.05   </td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">CG-SSD</td>
+        <td class="tg-9wq8">   67.60   </td>
+        <td class="tg-9wq8">   80.22   </td>
+        <td class="tg-9wq8">   61.23   </td>
+        <td class="tg-9wq8">   44.77   </td>
+        <td class="tg-9wq8">   51.50   </td>
+        <td class="tg-9wq8">   58.72   </td>
+        <td class="tg-9wq8">   43.36   </td>
+        <td class="tg-9wq8">   27.76   </td>
+        <td class="tg-9wq8">   65.79   </td>
+        <td class="tg-9wq8">   76.27   </td>
+        <td class="tg-9wq8">   60.84   </td>
+        <td class="tg-9wq8">   43.35   </td>
+        <td class="tg-9wq8">   61.63   </td>
+    </tr>
+    </tbody>
+    </table>
+
 
 # PLGU-IN
 
