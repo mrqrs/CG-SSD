@@ -22,6 +22,13 @@ State Key Laboratory of Information Engineering in Surveying, Mapping and Remote
     </thead>
     <tbody>
     <tr>
+        <td class="tg-9wq8">PointRCNN</td>
+        <td class="tg-9wq8">   52.00   </td>
+        <td class="tg-9wq8">   8.73   </td>
+        <td class="tg-9wq8">   34.02   </td>
+        <td class="tg-9wq8">   31.58   </td>
+    </tr>
+    <tr>
         <td class="tg-9wq8">PointPillar</td>
         <td class="tg-9wq8">   69.52   </td>
         <td class="tg-9wq8">   17.28   </td>
