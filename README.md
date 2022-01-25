@@ -1,5 +1,9 @@
-# CGCP
-*Corner Guided Single Stage 3D Object Detector from LiDAR Point Cloud*
+# CG-SSD
+Corner Guided Single Stage 3D Object Detector from LiDAR Point Cloud
+
+Ruiqi Ma, Chi Chen
+
+State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University
 
 # CG-SSD
 1. Result on ONCE testing set
@@ -179,9 +183,9 @@
 </tbody>
 </table>
 
-# as a plug-in
+# PLGU-IN
 
-1. result on ONCE validation set
+1. Result on ONCE validation set
     <table class="tg">
     <thead>
     <tr>
@@ -240,7 +244,7 @@
     </tr>
     </tbody>
     </table>
-2. result on Waymo validation set
+2. Result on Waymo validation set
     <table class="tg">
     <thead>
     <tr>
