@@ -180,137 +180,138 @@
 </table>
 
 # as a plug-in
+
 1. result on ONCE validation set
     <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-9wq8" rowspan="2">Model</th>
-    <th class="tg-9wq8" colspan="3">AP@50</th>
-    <th class="tg-9wq8" rowspan="2">mAP</th>
-  </tr>
-  <tr>
-    <th class="tg-9wq8">   Vehicle   </th>
-    <th class="tg-9wq8">   Pedestrian   </th>
-    <th class="tg-9wq8">   Cyclist   </th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-9wq8">PointPillars</td>
-    <td class="tg-9wq8">   68.57   </td>
-    <td class="tg-9wq8">   17.63   </td>
-    <td class="tg-9wq8">   46.81   </td>
-    <td class="tg-9wq8">   44.34   </td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">PointPillars<br>+auxiliary module</td>
-    <td class="tg-9wq8">70.45<br><span style="color:#F00">(+1.88)</td>
-    <td class="tg-9wq8">18.97<br><span style="color:#F00">(+2.34)</td>
-    <td class="tg-9wq8">53.71<br><span style="color:#F00">(+6.9)</td>
-    <td class="tg-9wq8">47.71<br><span style="color:#F00">(+3.37)</td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">SECOND</td>
-    <td class="tg-9wq8">71.19</td>
-    <td class="tg-9wq8">26.44</td>
-    <td class="tg-9wq8">58.04</td>
-    <td class="tg-9wq8">51.89</td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">SECOND<br>+auxiliary module</td>
-    <td class="tg-9wq8">71.10<br><span style="color:#F00">(-0.09)</td>
-    <td class="tg-9wq8">38.27<br><span style="color:#F00">(+11.83)</td>
-    <td class="tg-9wq8">61.89<br><span style="color:#F00">(+3.85)</td>
-    <td class="tg-9wq8">57.09<br><span style="color:#F00">(+5.2)</td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">PV-RCNN</td>
-    <td class="tg-9wq8">77.77</td>
-    <td class="tg-9wq8">23.50</td>
-    <td class="tg-9wq8">59.37</td>
-    <td class="tg-9wq8">53.55</td>
-  </tr>
-  <tr>
-    <td class="tg-9wq8">PV-RCNN<br>+auxiliary module</td>
-    <td class="tg-9wq8">79.20<br><span style="color:#F00">(+1.43)</td>
-    <td class="tg-9wq8">37.19<br><span style="color:#F00">(+13.69)</td>
-    <td class="tg-9wq8">65.39<br><span style="color:#F00">(+6.02)</td>
-    <td class="tg-9wq8">60.60<br><span style="color:#F00">(+7.05)</td>
-  </tr>
-</tbody>
-</table>
-1. result on Waymo validation set
+    <thead>
+    <tr>
+        <th class="tg-9wq8" rowspan="2">Model</th>
+        <th class="tg-9wq8" colspan="3">AP@50</th>
+        <th class="tg-9wq8" rowspan="2">mAP</th>
+    </tr>
+    <tr>
+        <th class="tg-9wq8">   Vehicle   </th>
+        <th class="tg-9wq8">   Pedestrian   </th>
+        <th class="tg-9wq8">   Cyclist   </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-9wq8">PointPillars</td>
+        <td class="tg-9wq8">   68.57   </td>
+        <td class="tg-9wq8">   17.63   </td>
+        <td class="tg-9wq8">   46.81   </td>
+        <td class="tg-9wq8">   44.34   </td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">PointPillars<br>+auxiliary module</td>
+        <td class="tg-9wq8">70.45<br><span style="color:#F00">(+1.88)</td>
+        <td class="tg-9wq8">18.97<br><span style="color:#F00">(+2.34)</td>
+        <td class="tg-9wq8">53.71<br><span style="color:#F00">(+6.9)</td>
+        <td class="tg-9wq8">47.71<br><span style="color:#F00">(+3.37)</td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">SECOND</td>
+        <td class="tg-9wq8">71.19</td>
+        <td class="tg-9wq8">26.44</td>
+        <td class="tg-9wq8">58.04</td>
+        <td class="tg-9wq8">51.89</td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">SECOND<br>+auxiliary module</td>
+        <td class="tg-9wq8">71.10<br><span style="color:#F00">(-0.09)</td>
+        <td class="tg-9wq8">38.27<br><span style="color:#F00">(+11.83)</td>
+        <td class="tg-9wq8">61.89<br><span style="color:#F00">(+3.85)</td>
+        <td class="tg-9wq8">57.09<br><span style="color:#F00">(+5.2)</td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">PV-RCNN</td>
+        <td class="tg-9wq8">77.77</td>
+        <td class="tg-9wq8">23.50</td>
+        <td class="tg-9wq8">59.37</td>
+        <td class="tg-9wq8">53.55</td>
+    </tr>
+    <tr>
+        <td class="tg-9wq8">PV-RCNN<br>+auxiliary module</td>
+        <td class="tg-9wq8">79.20<br><span style="color:#F00">(+1.43)</td>
+        <td class="tg-9wq8">37.19<br><span style="color:#F00">(+13.69)</td>
+        <td class="tg-9wq8">65.39<br><span style="color:#F00">(+6.02)</td>
+        <td class="tg-9wq8">60.60<br><span style="color:#F00">(+7.05)</td>
+    </tr>
+    </tbody>
+    </table>
+2. result on Waymo validation set
     <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-nrix" rowspan="2">Model</th>
-    <th class="tg-nrix" colspan="2">Vehicle/APH</th>
-    <th class="tg-nrix" colspan="2">Pedestrian/APH</th>
-    <th class="tg-nrix" colspan="2">Cyclist/APH</th>
-  </tr>
-  <tr>
-    <th class="tg-nrix">L1</th>
-    <th class="tg-nrix">L2</th>
-    <th class="tg-nrix">L1</th>
-    <th class="tg-nrix">L2</th>
-    <th class="tg-nrix">L1</th>
-    <th class="tg-nrix">L2</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-nrix">PointPillars</td>
-    <td class="tg-nrix">69.83</td>
-    <td class="tg-nrix">61.64</td>
-    <td class="tg-nrix">46.32</td>
-    <td class="tg-nrix">40.64</td>
-    <td class="tg-nrix">51.75</td>
-    <td class="tg-nrix">49.80</td>
-  </tr>
-  <tr>
-    <td class="tg-nrix">PointPillars<br>+auxiliary module</td>
-    <td class="tg-nrix">71.87<br><span style="color:#F00">(+2.04)</td>
-    <td class="tg-nrix">63.93<br><span style="color:#F00">(+2.29)</td>
-    <td class="tg-nrix">60.55<br><span style="color:#F00">(+14.23)</td>
-    <td class="tg-nrix">53.57<br><span style="color:#F00">(+12.93)</td>
-    <td class="tg-nrix">63.86<br><span style="color:#F00">(+12.11)</td>
-    <td class="tg-nrix">61.51<br><span style="color:#F00">(+11.71)</td>
-  </tr>
-  <tr>
-    <td class="tg-nrix">SECOND</td>
-    <td class="tg-nrix">70.34</td>
-    <td class="tg-nrix">62.02</td>
-    <td class="tg-nrix">54.24</td>
-    <td class="tg-nrix">47.49</td>
-    <td class="tg-nrix">55.62</td>
-    <td class="tg-nrix">53.53</td>
-  </tr>
-  <tr>
-    <td class="tg-nrix">SECOND<br>+auxiliary module</td>
-    <td class="tg-nrix">71.65<br><span style="color:#F00">(+1.31)</td>
-    <td class="tg-nrix">63.78<br><span style="color:#F00">(+1.76)</td>
-    <td class="tg-nrix">58.01<br><span style="color:#F00">(+3.77)</td>
-    <td class="tg-nrix">51.03<br><span style="color:#F00">(+3.54)</td>
-    <td class="tg-nrix">63.31<br><span style="color:#F00">(+7.69)</td>
-    <td class="tg-nrix">61.01<br><span style="color:#F00">(+7.48)</td>
-  </tr>
-  <tr>
-    <td class="tg-nrix">PV-RCNN</td>
-    <td class="tg-nrix">74.74</td>
-    <td class="tg-nrix">66.80</td>
-    <td class="tg-nrix">61.24</td>
-    <td class="tg-nrix">53.95</td>
-    <td class="tg-nrix">64.25</td>
-    <td class="tg-nrix">61.82</td>
-  </tr>
-  <tr>
-    <td class="tg-nrix">PV-RCNN<br>+auxiliary module</td>
-    <td class="tg-nrix">76.53<br><span style="color:#F00">(+1.79)</td>
-    <td class="tg-nrix">67.97<br><span style="color:#F00">(+1.17)</td>
-    <td class="tg-nrix">66.62<br><span style="color:#F00">(+5.38)</td>
-    <td class="tg-nrix">58.36<br><span style="color:#F00">(+4.41)</td>
-    <td class="tg-nrix">69.63<br><span style="color:#F00">(+5.38)</td>
-    <td class="tg-nrix">67.12<br><span style="color:#F00">(+5.3)</td>
-  </tr>
-</tbody>
-</table>
+    <thead>
+    <tr>
+        <th class="tg-nrix" rowspan="2">Model</th>
+        <th class="tg-nrix" colspan="2">Vehicle/APH</th>
+        <th class="tg-nrix" colspan="2">Pedestrian/APH</th>
+        <th class="tg-nrix" colspan="2">Cyclist/APH</th>
+    </tr>
+    <tr>
+        <th class="tg-nrix">L1</th>
+        <th class="tg-nrix">L2</th>
+        <th class="tg-nrix">L1</th>
+        <th class="tg-nrix">L2</th>
+        <th class="tg-nrix">L1</th>
+        <th class="tg-nrix">L2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-nrix">PointPillars</td>
+        <td class="tg-nrix">69.83</td>
+        <td class="tg-nrix">61.64</td>
+        <td class="tg-nrix">46.32</td>
+        <td class="tg-nrix">40.64</td>
+        <td class="tg-nrix">51.75</td>
+        <td class="tg-nrix">49.80</td>
+    </tr>
+    <tr>
+        <td class="tg-nrix">PointPillars<br>+auxiliary module</td>
+        <td class="tg-nrix">71.87<br><span style="color:#F00">(+2.04)</td>
+        <td class="tg-nrix">63.93<br><span style="color:#F00">(+2.29)</td>
+        <td class="tg-nrix">60.55<br><span style="color:#F00">(+14.23)</td>
+        <td class="tg-nrix">53.57<br><span style="color:#F00">(+12.93)</td>
+        <td class="tg-nrix">63.86<br><span style="color:#F00">(+12.11)</td>
+        <td class="tg-nrix">61.51<br><span style="color:#F00">(+11.71)</td>
+    </tr>
+    <tr>
+        <td class="tg-nrix">SECOND</td>
+        <td class="tg-nrix">70.34</td>
+        <td class="tg-nrix">62.02</td>
+        <td class="tg-nrix">54.24</td>
+        <td class="tg-nrix">47.49</td>
+        <td class="tg-nrix">55.62</td>
+        <td class="tg-nrix">53.53</td>
+    </tr>
+    <tr>
+        <td class="tg-nrix">SECOND<br>+auxiliary module</td>
+        <td class="tg-nrix">71.65<br><span style="color:#F00">(+1.31)</td>
+        <td class="tg-nrix">63.78<br><span style="color:#F00">(+1.76)</td>
+        <td class="tg-nrix">58.01<br><span style="color:#F00">(+3.77)</td>
+        <td class="tg-nrix">51.03<br><span style="color:#F00">(+3.54)</td>
+        <td class="tg-nrix">63.31<br><span style="color:#F00">(+7.69)</td>
+        <td class="tg-nrix">61.01<br><span style="color:#F00">(+7.48)</td>
+    </tr>
+    <tr>
+        <td class="tg-nrix">PV-RCNN</td>
+        <td class="tg-nrix">74.74</td>
+        <td class="tg-nrix">66.80</td>
+        <td class="tg-nrix">61.24</td>
+        <td class="tg-nrix">53.95</td>
+        <td class="tg-nrix">64.25</td>
+        <td class="tg-nrix">61.82</td>
+    </tr>
+    <tr>
+        <td class="tg-nrix">PV-RCNN<br>+auxiliary module</td>
+        <td class="tg-nrix">76.53<br><span style="color:#F00">(+1.79)</td>
+        <td class="tg-nrix">67.97<br><span style="color:#F00">(+1.17)</td>
+        <td class="tg-nrix">66.62<br><span style="color:#F00">(+5.38)</td>
+        <td class="tg-nrix">58.36<br><span style="color:#F00">(+4.41)</td>
+        <td class="tg-nrix">69.63<br><span style="color:#F00">(+5.38)</td>
+        <td class="tg-nrix">67.12<br><span style="color:#F00">(+5.3)</td>
+    </tr>
+    </tbody>
+    </table>
