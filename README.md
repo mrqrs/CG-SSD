@@ -5,6 +5,7 @@ Ruiqi Ma, Chi Chen
 
 State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University
 
+> The code will be released once the paper is accepted.
 # CG-SSD
 1. Result on ONCE testing set
     <table class="tg">
