@@ -5,7 +5,9 @@ Ruiqi Ma, Chi Chen, Bisheng Yang, Deren Li, Haiping Wang, Yangzi Cong, Zongtian 
 
 State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing (LIESMARS), Wuhan University
 Engineering Research Center of Space-Time Data Capturing and Smart Application, the Ministry of Education of P.R.C., China
-> The code will be released once the paper is accepted.
+> The code will be released once the paper is accepted. 
+(https://arxiv.org/abs/2202.11868)
+This is the official implementation for ["Corner Guided Single Stage 3D Object Detector from LiDAR Point Cloud"](https://arxiv.org/abs/2202.11868).
 # CG-SSD
 1. Result on ONCE testing set
     <table class="tg">
