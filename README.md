@@ -219,7 +219,7 @@ Engineering Research Center of Space-Time Data Capturing and Smart Application, 
     <tr>
         <td class="tg-9wq8">PointPillars<br>+auxiliary module</td>
         <td class="tg-9wq8">70.45<br><span style="color:#F00">(+1.88)</td>
-        <td class="tg-9wq8">18.97<br><span style="color:#F00">(+2.34)</td>
+        <td class="tg-9wq8">18.97<br><span style="color:#F00">(+1.34)</td>
         <td class="tg-9wq8">53.71<br><span style="color:#F00">(+6.9)</td>
         <td class="tg-9wq8">47.71<br><span style="color:#F00">(+3.37)</td>
     </tr>
