@@ -12,6 +12,8 @@ Please refer [ONCE_Benchmark](https://github.com/PointsCoder/ONCE_Benchmark) for
 
 
 **train model**
+
+
 ``python tools/train.py --cfg_file tools/cfgs/once_models/sup_models/cgssd.yaml``
 # CG-SSD
 1. Result on ONCE testing set
@@ -338,7 +340,8 @@ Please refer [ONCE_Benchmark](https://github.com/PointsCoder/ONCE_Benchmark) for
 
 # Citation
 If the paper is useful for your research, please consider cite:
->@article{MA202233,
+>
+@article{MA202233,
 title = {CG-SSD: Corner guided single stage 3D object detection from LiDAR point cloud},
 journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
 volume = {191},
