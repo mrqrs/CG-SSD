@@ -94,9 +94,6 @@ class CenterHead(nn.Module):
         targets_dict = self.target_assigner.assign_targets_v2(
             gt_boxes
         )
-        # targets_dict = self.target_assigner.assign_targets_v3(
-        #     gt_boxes
-        # ) ### anchor
 
         return targets_dict
 
@@ -954,9 +951,6 @@ class CenterHead_Aux_3C(nn.Module):
         targets_dict = self.target_assigner.assign_targets_v2(
             gt_boxes
         )
-        # targets_dict = self.target_assigner.assign_targets_v3(
-        #     gt_boxes
-        # )  ### semi-anchor
         targets_dict_aux = self.target_assigner_aux.assign_targets_3p(
             gt_boxes, points, use_corner0
         )
@@ -1066,125 +1060,6 @@ class CenterHead_Aux_3C(nn.Module):
 
             loc_loss = (box_loss * box_loss.new_tensor(self.code_weights)).sum()
 
-            # target_box_offset0_encoding = self.forward_ret_dict['offset0'][task_id]
-            # pred_corner0_offset_encoding = aux_pred_dict['offset0']
-
-            # offset0_aux_loss = self.crit_reg(
-            #     pred_corner0_offset_encoding,
-            #     self.forward_ret_dict['mask0'][task_id],
-            #     self.forward_ret_dict['ind0'][task_id],
-            #     target_box_offset0_encoding
-            # )
-
-            # target_box_offset1_encoding = self.forward_ret_dict['offset1'][task_id]
-            # pred_corner1_offset_encoding = aux_pred_dict['offset1']
-
-            # offset1_aux_loss = self.crit_reg(
-            #     pred_corner1_offset_encoding,
-            #     self.forward_ret_dict['mask1'][task_id],
-            #     self.forward_ret_dict['ind1'][task_id],
-            #     target_box_offset1_encoding
-            # )
-
-            # target_box_offset2_encoding = self.forward_ret_dict['offset2'][task_id]
-            # pred_corner2_offset_encoding = aux_pred_dict['offset2']
-
-            # offset2_aux_loss = self.crit_reg(
-            #     pred_corner2_offset_encoding,
-            #     self.forward_ret_dict['mask2'][task_id],
-            #     self.forward_ret_dict['ind2'][task_id],
-            #     target_box_offset2_encoding
-            # )
-
-            # loss = hm_loss + self.weight * loc_loss + self.weight*(hm0_aux_loss + hm1_aux_loss + hm2_aux_loss + offset0_aux_loss.sum() + offset1_aux_loss.sum() + offset2_aux_loss.sum())
-            loss = hm_loss + self.weight * loc_loss + self.weight*(hm0_aux_loss + hm1_aux_loss + hm2_aux_loss)
-
-            tb_key = 'task_' + str(task_id) + '/'
-
-            if self.dataset == 'nuscenes':
-                tb_dict.update({
-                    tb_key + 'loss': loss.item(), tb_key + 'hm_loss': hm_loss.item(), tb_key + 'loc_loss': loc_loss.item(),
-                    tb_key + 'x_loss': box_loss[0].item(), tb_key + 'y_loss': box_loss[1].item(), tb_key + 'z_loss': box_loss[2].item(),
-                    tb_key + 'w_loss': box_loss[3].item(), tb_key + 'l_loss': box_loss[4].item(), tb_key + 'h_loss': box_loss[5].item(),
-                    tb_key + 'sin_r_loss': box_loss[6].item(), tb_key + 'cos_r_loss': box_loss[7].item(),
-                    tb_key + 'vx_loss': box_loss[8].item(), tb_key + 'vy_loss': box_loss[9].item(),
-                    tb_key + 'num_positive': self.forward_ret_dict['mask'][task_id].float().sum(),
-                })
-            else:
-                tb_dict.update({
-                    tb_key + 'loss': loss.item(), 
-                    tb_key + 'hm_loss': hm_loss.item(),
-                    tb_key + 'loc_loss': loc_loss.item(),
-                    tb_key + 'hm0_loss': hm0_aux_loss.item(),
-                    # tb_key + 'c0_loss': offset0_aux_loss.sum().item(),
-                    tb_key + 'hm1_loss': hm1_aux_loss.item(),
-                    # tb_key + 'c1_loss': offset1_aux_loss.sum().item(),
-                    tb_key + 'hm2_loss': hm2_aux_loss.item(),
-                    # tb_key + 'c2_loss': offset2_aux_loss.sum().item(),
-                    
-                    tb_key + 'num_positive': self.forward_ret_dict['mask'][task_id].float().sum(),
-                })
-            center_loss.append(loss)
-
-        return sum(center_loss), tb_dict
-
-    def get_loss_anchor(self):
-        tb_dict = {}
-        pred_dicts = self.forward_ret_dict['multi_head_features']
-        aux_pred_dicts = self.forward_ret_dict['multi_head_features_aux']
-        center_loss = []
-        self.forward_ret_dict['pred_box_encoding'] = {}
-        for task_id in range(len(pred_dicts)):
-            pred_dict = pred_dicts[task_id]
-            aux_pred_dict = aux_pred_dicts[task_id]
-            pred_dict['hm'] = self._sigmoid(pred_dict['hm'])
-            hm_loss = self.crit(pred_dict['hm'], self.forward_ret_dict['heatmap'][task_id])
-
-            aux_pred_dict['hm0'] = self._sigmoid(aux_pred_dict['hm0'])
-            hm0_aux_loss = self.crit(aux_pred_dict['hm0'], self.forward_ret_dict['heatmap0'][task_id])
-
-            aux_pred_dict['hm1'] = self._sigmoid(aux_pred_dict['hm1'])
-            hm1_aux_loss = self.crit(aux_pred_dict['hm1'], self.forward_ret_dict['heatmap1'][task_id])
-
-            aux_pred_dict['hm2'] = self._sigmoid(aux_pred_dict['hm2'])
-            hm2_aux_loss = self.crit(aux_pred_dict['hm2'], self.forward_ret_dict['heatmap2'][task_id])
-
-            target_box_encoding = self.forward_ret_dict['box_encoding'][task_id]
-            # nuscense encoding format [x, y, z, w, l, h, sinr, cosr, vx, vy]
-
-            if self.dataset == 'nuscenes':
-                pred_box_encoding = torch.cat([
-                    pred_dict['reg'],
-                    pred_dict['height'],
-                    pred_dict['dim'],
-                    pred_dict['rot'],
-                    pred_dict['vel']
-                ], dim = 1).contiguous() # (B, 10, H, W)
-            else:
-                pred_box_encoding = torch.cat([
-                    pred_dict['reg'],
-                    pred_dict['height'],
-                    pred_dict['dim'],
-                    pred_dict['rot']
-                ], dim = 1).contiguous() # (B, 8, H, W)
-
-            self.forward_ret_dict['pred_box_encoding'][task_id] = pred_box_encoding
-
-            box_loss = self.crit_reg(
-                pred_box_encoding[:, [0,1,2,6,7], ...],
-                self.forward_ret_dict['mask'][task_id],
-                self.forward_ret_dict['ind'][task_id],
-                target_box_encoding[..., [0,1,2,6,7]]
-            )
-            dim_loss = self.crit_reg_dim(
-                pred_box_encoding[:, [3,4,5], ...],
-                self.forward_ret_dict['mask'][task_id],
-                self.forward_ret_dict['ind'][task_id],
-                target_box_encoding[..., [3,4,5]]
-            )
-
-            # loc_loss = (box_loss * box_loss.new_tensor(self.code_weights)).sum()
-            loc_loss = box_loss.sum() + dim_loss.sum()
             target_box_offset0_encoding = self.forward_ret_dict['offset0'][task_id]
             pred_corner0_offset_encoding = aux_pred_dict['offset0']
 
@@ -1215,8 +1090,7 @@ class CenterHead_Aux_3C(nn.Module):
                 target_box_offset2_encoding
             )
 
-            loss = hm_loss + self.weight * loc_loss + 0.25*(hm0_aux_loss + hm1_aux_loss + hm2_aux_loss + offset0_aux_loss.sum() + offset1_aux_loss.sum() + offset2_aux_loss.sum())
-            # loss = hm_loss + self.weight * loc_loss + self.weight*(hm0_aux_loss + hm1_aux_loss + hm2_aux_loss + self.weight*(offset0_aux_loss.sum() + offset1_aux_loss.sum() + offset2_aux_loss.sum()))
+            loss = hm_loss + self.weight * loc_loss + self.weight*(hm0_aux_loss + hm1_aux_loss + hm2_aux_loss + offset0_aux_loss.sum() + offset1_aux_loss.sum() + offset2_aux_loss.sum())
 
             tb_key = 'task_' + str(task_id) + '/'
 
